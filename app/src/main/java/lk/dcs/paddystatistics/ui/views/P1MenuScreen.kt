@@ -3,7 +3,6 @@ package lk.dcs.paddystatistics.ui.views
 import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
@@ -20,6 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import lk.dcs.paddystatistics.ui.views.navigation.ScreenRoutes
 
 @Composable
 fun P1MenuScreen(context: Context, navController: NavController) {
@@ -51,7 +51,7 @@ fun P1MenuScreen(context: Context, navController: NavController) {
 
                 //modifier = Modifier.padding(10.dp).border(width = 1.dp, color = Color.Blue)
             ) {
-                Button(
+                /*Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
                     modifier = Modifier
                         .height(108.dp)
@@ -73,9 +73,9 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                         fontSize = 15.sp,
                         textAlign = TextAlign.Center
                     )
-                }
+                }*/
 
-                Spacer(modifier = Modifier.height(52.dp))
+               // Spacer(modifier = Modifier.height(52.dp))
 
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
@@ -137,7 +137,7 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                 verticalArrangement = Arrangement.Center,
                 //modifier = Modifier.padding(10.dp).border(width = 1.dp, color = Color.Blue)
             ) {
-                Button(
+                /*Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
                     modifier = Modifier
                         .height(108.dp)
@@ -160,9 +160,9 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                         fontSize = 15.sp,
                         textAlign = TextAlign.Center,
                     )
-                }
+                }*/
 
-                Spacer(modifier = Modifier.height(52.dp))
+                //Spacer(modifier = Modifier.height(52.dp))
 
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),

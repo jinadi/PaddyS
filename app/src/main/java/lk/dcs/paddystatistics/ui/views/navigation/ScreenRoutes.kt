@@ -1,7 +1,7 @@
-package lk.dcs.paddystatistics.ui.views
+package lk.dcs.paddystatistics.ui.views.navigation
 
 sealed class ScreenRoutes(val route: String) {
-    object LoginScreen :ScreenRoutes("LoginScreen")
+    object LoginScreen : ScreenRoutes("LoginScreen")
     object P1MenuScreen : ScreenRoutes("P1MenuScreen")
     object FarmerRegScreen : ScreenRoutes("FarmerRegScreen")
     object PaddyRegScreen : ScreenRoutes("PaddyRegScreen")
