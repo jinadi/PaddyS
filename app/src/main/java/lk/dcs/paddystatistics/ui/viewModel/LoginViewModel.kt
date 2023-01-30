@@ -1,4 +1,4 @@
-package lk.dcs.paddystatistics.ui.views
+package lk.dcs.paddystatistics.ui.viewModel
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase
 abstract class MyDatabase: RoomDatabase() {
 
     abstract fun getUserDao(): UserDao
+    //abstract fun getIntInfoDao():IntInfoDao
 
     companion object {
         @Volatile

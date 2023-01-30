@@ -5,8 +5,11 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import lk.dcs.paddystatistics.database.IntInfoRepository
 import lk.dcs.paddystatistics.database.MyDatabase
 import lk.dcs.paddystatistics.database.UserRepository
+import lk.dcs.paddystatistics.ui.viewModel.IntInfoViewModel
+import lk.dcs.paddystatistics.ui.viewModel.LoginViewModel
 import lk.dcs.paddystatistics.ui.views.navigation.ScreenRoutes
 
 @Composable
@@ -20,7 +23,17 @@ fun NavControllerComp(context: Context) {
             val vm = LoginViewModel(repository)
             LoginScreen(context = context, navController, vm)
         }
-        composable(ScreenRoutes.P1MenuScreen.route) { P1MenuScreen(context = context,navController) }
+
+        composable(ScreenRoutes.InitializationScreen.route) {
+            val db = MyDatabase.getInstance(context)
+            val intRepo = IntInfoRepository(db)
+            val Intvm = IntInfoViewModel(intRepo)
+            InitializationScreen(context = context,navController,Intvm)
+        }
+
+
+       // composable(ScreenRoutes.InitializationScreen.route) { InitializationScreen(context = context,navController) }
+        composable(ScreenRoutes.MenuScreen.route) { MenuScreen(context = context,navController) }
         composable(ScreenRoutes.P1Screen.route) { P1Screen(context = context,navController) }
         composable(ScreenRoutes.P0Screen.route) { P0Screen(context = context,navController) }
         composable(ScreenRoutes.HQRequestScreen.route) { HQRequestScreen(context = context,navController) }

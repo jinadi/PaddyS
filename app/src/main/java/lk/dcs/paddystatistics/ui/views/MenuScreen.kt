@@ -15,6 +15,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -22,58 +24,32 @@ import androidx.navigation.NavController
 import lk.dcs.paddystatistics.ui.views.navigation.ScreenRoutes
 
 @Composable
-fun P1MenuScreen(context: Context, navController: NavController) {
+fun MenuScreen(context: Context, navController: NavController) {
 
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxWidth()
     ) {
-        Image(
-            painter = painterResource(id = lk.dcs.paddystatistics.R.drawable.header_menu),
-            contentDescription = "headerImage",
-            contentScale = ContentScale.FillWidth,
-            modifier = Modifier
-                .width(450.dp)
-                .height(104.dp)
-                .align(Alignment.TopStart)
-        )
-0
+
+
+
         Row(
-            horizontalArrangement = Arrangement.End,
+
+            horizontalArrangement = Arrangement.Center,
             modifier = Modifier.padding(10.dp)
                 //.border(width = 1.dp, color = Color.Magenta),
 
             ) {
-            //Spacer(modifier = Modifier.height(186.dp).width(26.dp))
+
+           // Spacer(modifier = Modifier.weight(1F))
             Column(
-                //horizontalAlignment = Alignment.CenterHorizontally,
-                //verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceBetween,
+
 
                 //modifier = Modifier.padding(10.dp).border(width = 1.dp, color = Color.Blue)
             ) {
-                /*Button(
-                    colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
-                    modifier = Modifier
-                        .height(108.dp)
-                        .width(138.dp)
-                        .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
-                    onClick = {
-                        ///button click
-                        navController.navigate(ScreenRoutes.FarmerRegScreen.route)
-                        Toast.makeText(
-                            context,
-                            "Farmer Registration...",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                ) {
-                    Text(
-                        text = "Farmer Registration",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        textAlign = TextAlign.Center
-                    )
-                }*/
+
 
                // Spacer(modifier = Modifier.height(52.dp))
 
@@ -85,13 +61,10 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
                         //P1 form btn click
+                        Toast.makeText(context, "Success P1 form", Toast.LENGTH_LONG)
+                            .show()
+                        navController.navigate(ScreenRoutes.InitializationScreen.route)
 
-                        navController.navigate(ScreenRoutes.P1Screen.route)
-                        Toast.makeText(
-                            context,
-                            "P1 Form...",
-                            Toast.LENGTH_SHORT
-                        ).show()
                     }
                 ) {
                     Text(
@@ -111,23 +84,26 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                         .width(138.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
-                        //HQ request btn click
+                        //reports btn click
 
-                        navController.navigate(ScreenRoutes.HQRequestScreen.route)
+                        navController.navigate(ScreenRoutes.ReportScreen.route)
                         Toast.makeText(
                             context,
-                            "HQ Request page...",
+                            "Reports...",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
                 ) {
                     Text(
-                        text = "HQ Request",
+                        text = "Reports",
                         color = Color.Black,
                         fontSize = 15.sp,
                         textAlign = TextAlign.Center
                     )
+
                 }
+
+
             } // end column 1
 
             Spacer(modifier = Modifier.width(70.dp))
@@ -137,30 +113,7 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                 verticalArrangement = Arrangement.Center,
                 //modifier = Modifier.padding(10.dp).border(width = 1.dp, color = Color.Blue)
             ) {
-                /*Button(
-                    colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
-                    modifier = Modifier
-                        .height(108.dp)
-                        .width(138.dp)
-                        .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
-                    onClick = {
-                        //Paddy reg btn click
 
-                        navController.navigate(ScreenRoutes.PaddyRegScreen.route)
-                        Toast.makeText(
-                            context,
-                            "Paddy Registration...",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                ) {
-                    Text(
-                        text = "Paddy Registration",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        textAlign = TextAlign.Center,
-                    )
-                }*/
 
                 //Spacer(modifier = Modifier.height(52.dp))
 
@@ -203,24 +156,28 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                         navController.navigate(ScreenRoutes.ReportScreen.route)
                         Toast.makeText(
                             context,
-                            "Reports...",
+                            "HQ Requests...",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
                 ) {
                     Text(
-                        text = "Reports",
+                        text = "HQ Requests",
                         color = Color.Black,
                         fontSize = 15.sp,
                         textAlign = TextAlign.Center
                     )
 
                 }
+
+                Spacer(modifier = Modifier.height(52.dp))
+
+
             } //end column 2
 
         } //end row
 
-        Box(
+       /* Box(
             contentAlignment = Alignment.BottomStart,
             modifier = Modifier.fillMaxSize()
         ) {
@@ -232,7 +189,7 @@ fun P1MenuScreen(context: Context, navController: NavController) {
                     .width(450.dp)
                     .height(80.dp)
             )
-        }
+        }*/
 
     } //end box
 }

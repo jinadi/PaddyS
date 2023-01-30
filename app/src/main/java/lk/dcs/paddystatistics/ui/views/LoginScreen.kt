@@ -18,10 +18,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import lk.dcs.paddystatistics.ui.viewModel.LoginViewModel
 import lk.dcs.paddystatistics.ui.views.navigation.ScreenRoutes
 
 @Composable
-fun LoginScreen(context: Context, navController:NavController, vm:LoginViewModel) {
+fun LoginScreen(context: Context, navController:NavController, vm: LoginViewModel) {
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -62,7 +63,7 @@ fun LoginScreen(context: Context, navController:NavController, vm:LoginViewModel
                 if (vm.userById != null) {
                     Toast.makeText(context, "Success ${vm.userById?.username}", Toast.LENGTH_LONG)
                         .show()
-                    navController.navigate(ScreenRoutes.P1MenuScreen.route)
+                    navController.navigate(ScreenRoutes.MenuScreen.route)
                 }
                 else {
                     navController.navigate(ScreenRoutes.LoginScreen.route)
