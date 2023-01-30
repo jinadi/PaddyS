@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -21,6 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import lk.dcs.paddystatistics.R
 import lk.dcs.paddystatistics.ui.views.navigation.ScreenRoutes
 
 @Composable
@@ -28,10 +30,13 @@ fun MenuScreen(context: Context, navController: NavController) {
 
     Box(
         contentAlignment = Alignment.Center,
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxSize()
     ) {
-
-
+        Image(painter = painterResource(id = R.drawable.bg_main2),
+            contentDescription = "bg",
+            modifier = Modifier.fillMaxSize().blur(50.dp),
+            contentScale = ContentScale.Crop
+        )
 
         Row(
 
@@ -56,8 +61,8 @@ fun MenuScreen(context: Context, navController: NavController) {
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
                     modifier = Modifier
-                        .height(108.dp)
-                        .width(138.dp)
+                        .height(500.dp)
+                        .width(200.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
                         //P1 form btn click
@@ -75,13 +80,13 @@ fun MenuScreen(context: Context, navController: NavController) {
                     )
                 }
 
-                Spacer(modifier = Modifier.height(52.dp))
+                Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
                     modifier = Modifier
                         .height(108.dp)
-                        .width(138.dp)
+                        .width(200.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
                         //reports btn click
@@ -106,7 +111,7 @@ fun MenuScreen(context: Context, navController: NavController) {
 
             } // end column 1
 
-            Spacer(modifier = Modifier.width(70.dp))
+            Spacer(modifier = Modifier.width(20.dp))
 
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -142,7 +147,7 @@ fun MenuScreen(context: Context, navController: NavController) {
                     )
                 }
 
-                Spacer(modifier = Modifier.height(52.dp))
+                Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
