@@ -1,6 +1,7 @@
 package lk.dcs.paddystatistics.ui.views
 
 import android.content.Context
+import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -17,6 +18,7 @@ fun NavControllerComp(context: Context) {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = ScreenRoutes.LoginScreen.route) {
+
         composable(ScreenRoutes.LoginScreen.route) {
             val db = MyDatabase.getInstance(context)
             val repository = UserRepository(db)

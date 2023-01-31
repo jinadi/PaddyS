@@ -32,9 +32,9 @@ fun MenuScreen(context: Context, navController: NavController) {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
     ) {
-        Image(painter = painterResource(id = R.drawable.bg_main2),
-            contentDescription = "bg",
-            modifier = Modifier.fillMaxSize().blur(50.dp),
+        Image(painter = painterResource(id = R.drawable.bg_main4),
+            contentDescription = "bg1",
+            modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
 
@@ -59,9 +59,9 @@ fun MenuScreen(context: Context, navController: NavController) {
                // Spacer(modifier = Modifier.height(52.dp))
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
                     modifier = Modifier
-                        .height(500.dp)
+                        .height(220.dp)
                         .width(200.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
@@ -125,7 +125,7 @@ fun MenuScreen(context: Context, navController: NavController) {
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
                     modifier = Modifier
-                        .height(108.dp)
+                        .height(100.dp)
                         .width(138.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
@@ -152,7 +152,7 @@ fun MenuScreen(context: Context, navController: NavController) {
                 Button(
                     colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
                     modifier = Modifier
-                        .height(108.dp)
+                        .height(100.dp)
                         .width(138.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {

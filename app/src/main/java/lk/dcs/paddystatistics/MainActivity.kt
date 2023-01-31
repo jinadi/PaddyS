@@ -1,27 +1,13 @@
 package lk.dcs.paddystatistics
 
-import android.app.assist.AssistContent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
 import lk.dcs.paddystatistics.ui.theme.PaddyStatisticsTheme
-import lk.dcs.paddystatistics.ui.views.LoginScreen
 import lk.dcs.paddystatistics.ui.views.NavControllerComp
 
 class MainActivity : ComponentActivity() {
@@ -34,11 +20,54 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-
-                    val context=applicationContext
+                  val context=applicationContext
                     NavControllerComp(context)
 
                 }
+         /*       val scaffoldState = rememberScaffoldState()
+                val scope = rememberCoroutineScope()
+                Scaffold(
+                    scaffoldState = scaffoldState,
+                    topBar = {
+                             lk.dcs.paddystatistics.ui.views.navigation.AppBar(onNavigationIconClick = {
+                                 scope.launch {
+                                     scaffoldState.drawerState.open()
+                                 }
+
+                                }
+                             )
+                    },
+                    drawerContent = {
+                    DrawerHeader()
+                    DrawerBody(items = listOf(
+                        NavMenuItem(
+                            id1 = "home",
+                            title = "Home",
+                            icon = Icons.Default.Home
+                        ),
+                        NavMenuItem(
+                            id1 = "settings",
+                            title = "Setting",
+                            icon = Icons.Default.Settings
+                        ),
+                        NavMenuItem(
+                            id1 = "help",
+                            title = "Help",
+                            icon = Icons.Default.Info
+                        )
+
+                    ), onItemClick ={
+                        when(it.id1){
+                            "home" -> {
+                                val intent = Intent(this@MainActivity, ScreenRoutes.LoginScreen::class.java);
+                                startActivity(intent);
+                            }
+                        }
+                        println("Clicked on ${it.title}")
+                    } )
+                }) {
+
+                }*/
             }
         }
     }
@@ -47,7 +76,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 
 fun screenBg(){
-
 }
 
 
