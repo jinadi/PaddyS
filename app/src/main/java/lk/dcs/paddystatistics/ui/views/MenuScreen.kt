@@ -32,9 +32,9 @@ fun MenuScreen(context: Context, navController: NavController) {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
     ) {
-        Image(painter = painterResource(id = R.drawable.bg_main2),
-            contentDescription = "bg",
-            modifier = Modifier.fillMaxSize().blur(50.dp),
+        Image(painter = painterResource(id = R.drawable.bg_main3),
+            contentDescription = "bg1",
+            modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
 
