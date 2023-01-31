@@ -19,6 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -32,7 +33,7 @@ fun MenuScreen(context: Context, navController: NavController) {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
     ) {
-        Image(painter = painterResource(id = R.drawable.bg_main2),
+        Image(painter = painterResource(id = R.drawable.bg_main),
             contentDescription = "bg",
             modifier = Modifier.fillMaxSize().blur(50.dp),
             contentScale = ContentScale.Crop
@@ -68,7 +69,7 @@ fun MenuScreen(context: Context, navController: NavController) {
                         //P1 form btn click
                         Toast.makeText(context, "Success P1 form", Toast.LENGTH_LONG)
                             .show()
-                        navController.navigate(ScreenRoutes.InitializationScreen.route)
+                        navController.navigate(ScreenRoutes.P1Screen.route)
 
                     }
                 ) {

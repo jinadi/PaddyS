@@ -30,7 +30,7 @@ import lk.dcs.paddystatistics.ui.views.navigation.ScreenRoutes
 fun LoginScreen(context: Context, navController:NavController, vm: LoginViewModel) {
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(painter = painterResource(id = R.drawable.bg_main2),
+        Image(painter = painterResource(id = R.drawable.bg_main),
         contentDescription = "bg",
             modifier = Modifier.fillMaxSize().blur(50.dp),
             contentScale = ContentScale.Crop
