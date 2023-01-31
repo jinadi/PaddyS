@@ -4,10 +4,7 @@ import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,7 +27,7 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = R.drawable.bg_main3),
+            painter = painterResource(id = R.drawable.bg_main4),
             contentDescription = "bg",
             modifier = Modifier
                 .fillMaxSize(),
@@ -57,28 +54,44 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
                 value = "district",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "District") },
-                modifier = Modifier.padding(15.dp)
+                colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
+                textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.primary),
+                modifier = Modifier
+                    .padding(15.dp)
+                    .fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = "dsd",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "DS Division") },
-                modifier = Modifier.padding(15.dp)
+                colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
+                textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.primary),
+                modifier = Modifier
+                    .padding(15.dp)
+                    .fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = "gnd",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "GN Division") },
-                modifier = Modifier.padding(15.dp)
+                colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
+                textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.primary),
+                modifier = Modifier
+                    .padding(15.dp)
+                    .fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = "agriCenter",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "Agrarian Services Center") },
-                modifier = Modifier.padding(15.dp)
+                colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
+                textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.primary),
+                modifier = Modifier
+                    .padding(15.dp)
+                    .fillMaxWidth()
             )
 
 
@@ -86,12 +99,19 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
                 value = "village",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "Village") },
-                modifier = Modifier.padding(15.dp)
+                colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
+                textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.primary),
+                modifier = Modifier
+                    .padding(15.dp)
+                    .fillMaxWidth()
             )
 
             Button(
-                colors = ButtonDefaults.buttonColors(Color(0xff6750A4)),
-                modifier = Modifier.clip(RoundedCornerShape(10.dp, 10.dp, 10.dp, 10.dp)),
+                colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
+                modifier = Modifier
+                    .clip(RoundedCornerShape(10.dp, 10.dp, 10.dp, 10.dp))
+                    .height(50.dp)
+                    .width(385.dp),
                 onClick = {
 
                 }
