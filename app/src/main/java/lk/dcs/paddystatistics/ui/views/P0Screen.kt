@@ -42,6 +42,18 @@ fun P0Screen(context: Context, navController: NavController) {
     else
         Icons.Filled.KeyboardArrowDown
 
+//    irrigation
+    var expandedI by remember { mutableStateOf(false) }
+    val suggestionsI = listOf("Major", "Minor", "Rainfed")
+    var selectedTextI by remember { mutableStateOf("") }
+
+    var textfieldSizeI by remember { mutableStateOf(Size.Zero)}
+
+    val iconI = if (expandedI)
+        Icons.Filled.KeyboardArrowUp
+    else
+        Icons.Filled.KeyboardArrowDown
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = R.drawable.bg_main4),
@@ -112,13 +124,36 @@ fun P0Screen(context: Context, navController: NavController) {
             )
 
             OutlinedTextField(
-                value = "",
-                onValueChange = { /*vm.username.value = it*/ },
-                label = { Text(text = "Season") },
+                value = selectedTextI,
+                onValueChange = { selectedTextI = it },
+                label = { Text(text = "Irrigation Type") },
                 colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
                 textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.primary),
                 modifier = Modifier.padding(15.dp).fillMaxWidth()
+                    .onGloballyPositioned { coordinates ->
+                        //This value is used to assign to the DropDown the same width
+                        textfieldSizeI = coordinates.size.toSize()
+                    },
+                trailingIcon = {
+                    Icon(iconI,"contentDescription",
+                        Modifier.clickable { expandedI = !expandedI })
+                }
             )
+            DropdownMenu(
+                expanded = expandedI,
+                onDismissRequest = { expandedI = false },
+                modifier = Modifier
+                    .width(with(LocalDensity.current){textfieldSizeI.width.toDp()})
+            ) {
+                suggestionsI.forEach { label ->
+                    DropdownMenuItem(onClick = {
+                        selectedTextI = label
+                        expandedI = false
+                    }) {
+                        Text(text = label)
+                    }
+                }
+            }
 
 
             OutlinedTextField(
