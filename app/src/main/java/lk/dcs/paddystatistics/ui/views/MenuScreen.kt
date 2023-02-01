@@ -15,6 +15,7 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -64,6 +65,7 @@ fun MenuScreen(context: Context, navController: NavController) {
                         .height(220.dp)
                         .width(200.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
+
                     onClick = {
                         //P1 form btn click
                         Toast.makeText(context, "Success P1 form", Toast.LENGTH_LONG)
@@ -72,18 +74,36 @@ fun MenuScreen(context: Context, navController: NavController) {
 
                     }
                 ) {
-                    Text(
-                        text = "P1",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        textAlign = TextAlign.Center
-                    )
+                    Column(
+                        modifier = Modifier
+                            .padding(5.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+
+                        Text(
+                            text = "P1",
+                            color = Color.Black,
+                            fontSize = 15.sp,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(modifier = Modifier.height(5.dp))
+                        Image(
+                            painter = painterResource(id = R.drawable.p1_logo),
+                            contentDescription = null,
+
+                            modifier = Modifier
+                                .height(100.dp)
+                                .width(100.dp)
+                        )
+                    }
+
                 }
 
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
                     modifier = Modifier
                         .height(108.dp)
                         .width(200.dp)
@@ -99,12 +119,29 @@ fun MenuScreen(context: Context, navController: NavController) {
                         ).show()
                     }
                 ) {
-                    Text(
-                        text = "Reports",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        textAlign = TextAlign.Center
-                    )
+                    Column(
+                        modifier = Modifier
+                            .padding(5.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+
+                        Text(
+                            text = "Reports",
+                            color = Color.Black,
+                            fontSize = 15.sp,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(modifier = Modifier.height(5.dp))
+                        Image(
+                            painter = painterResource(id = R.drawable.reports_logo),
+                            contentDescription = null,
+
+                            modifier = Modifier
+                                .height(100.dp)
+                                .width(100.dp)
+                        )
+                    }
 
                 }
 
@@ -123,7 +160,7 @@ fun MenuScreen(context: Context, navController: NavController) {
                 //Spacer(modifier = Modifier.height(52.dp))
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
                     modifier = Modifier
                         .height(100.dp)
                         .width(138.dp)
@@ -139,20 +176,38 @@ fun MenuScreen(context: Context, navController: NavController) {
                         ).show()
                     }
                 ) {
-                    Text(
-                        text = "P0",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        textAlign = TextAlign.Center
-                    )
+                    Column(
+                        modifier = Modifier
+                            .padding(5.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+
+                        Text(
+                            text = "P0",
+                            color = Color.Black,
+                            fontSize = 15.sp,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(modifier = Modifier.height(5.dp))
+                        Image(
+                            painter = painterResource(id = R.drawable.p0_logo),
+                            contentDescription = null,
+
+                            modifier = Modifier
+                                .height(100.dp)
+                                .width(100.dp)
+                        )
+                    }
+
                 }
 
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(Color(0xffCAC4D0)),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
                     modifier = Modifier
-                        .height(100.dp)
+                        .height(228.dp)
                         .width(138.dp)
                         .clip(RoundedCornerShape(12.dp, 12.dp, 12.dp, 12.dp)),
                     onClick = {
@@ -166,12 +221,29 @@ fun MenuScreen(context: Context, navController: NavController) {
                         ).show()
                     }
                 ) {
-                    Text(
-                        text = "HQ Requests",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        textAlign = TextAlign.Center
-                    )
+                    Column(
+                        modifier = Modifier
+                            .padding(5.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+
+                        Text(
+                            text = "HQ Request",
+                            color = Color.Black,
+                            fontSize = 15.sp,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(modifier = Modifier.height(5.dp))
+                        Image(
+                            painter = painterResource(id = R.drawable.request_logo),
+                            contentDescription = null,
+
+                            modifier = Modifier
+                                .height(100.dp)
+                                .width(100.dp)
+                        )
+                    }
 
                 }
 
