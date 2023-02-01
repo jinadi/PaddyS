@@ -40,9 +40,11 @@ Department: The department will collect data as a softcopy without any paperwork
 
 
 **User Interfaces**
-
-![login](https://user-images.githubusercontent.com/6000700/215913201-5f2cf77e-fea8-47df-b309-ce4ca8918b0c.JPG)   ![MenuNew](https://user-images.githubusercontent.com/6000700/215938719-b2f0364e-c9e8-401b-81d4-a90062ec9a49.jpeg)![ini](https://user-images.githubusercontent.com/6000700/215913289-49cfe24f-d63a-4a2e-b526-e35b55ba4346.JPG)![dropDwon](https://user-images.githubusercontent.com/6000700/215913314-f33880c6-c8e2-4bd4-bffb-76291a507e85.JPG)![P0](https://user-images.githubuserconte![Uploading MenuNew.jpeg…]()
-nt.com/6000700/215938463-f3f066f1-e324-4f15-8b38-27ad6773af1d.jpeg)
+![login](https://user-images.githubusercontent.com/6000700/215938885-b1fc0dca-0191-4ce1-9502-39e901cb3795.JPG)
+![MenuNew](https://user-images.githubusercontent.com/6000700/215938904-4a12aa19-42a6-4a83-8952-1a57005ed3d8.jpeg)
+![ini](https![dropDwon](https://user-images.githubusercontent.com/6000700/215938927-b2b8e3e2-2362-44ee-801d-9b561f645c76.JPG)
+![dropDwon](https://user-images.githubusercontent.com/6000700/215939021-dea512dc-1910-42f7-bcc3-a64947e1046d.JPG)
+![P0](https://user-images.githubusercontent.com/6000700/215938933-b8f99a21-42fb-41a1-b3cc-239f15c97e8f.jpeg)
 
 
 **Followed architectural patterns/Technologies**
