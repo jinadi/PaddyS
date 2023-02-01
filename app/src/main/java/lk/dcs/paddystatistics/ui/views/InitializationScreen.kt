@@ -51,7 +51,7 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
             )
 
             OutlinedTextField(
-                value = "district",
+                value = "",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "District") },
                 colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
@@ -62,7 +62,7 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
             )
 
             OutlinedTextField(
-                value = "dsd",
+                value = "",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "DS Division") },
                 colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
@@ -73,7 +73,7 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
             )
 
             OutlinedTextField(
-                value = "gnd",
+                value = "",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "GN Division") },
                 colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
@@ -84,7 +84,7 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
             )
 
             OutlinedTextField(
-                value = "agriCenter",
+                value = "",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "Agrarian Services Center") },
                 colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
@@ -96,7 +96,7 @@ fun InitializationScreen(context: Context, navController:NavController, intvm:In
 
 
             OutlinedTextField(
-                value = "village",
+                value = "",
                 onValueChange = { /*vm.username.value = it*/ },
                 label = { Text(text = "Village") },
                 colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
