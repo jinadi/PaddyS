@@ -1,5 +1,6 @@
 package lk.dcs.paddystatistics
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,6 +12,7 @@ import lk.dcs.paddystatistics.ui.theme.PaddyStatisticsTheme
 import lk.dcs.paddystatistics.ui.views.NavControllerComp
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
