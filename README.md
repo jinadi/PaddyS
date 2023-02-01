@@ -31,7 +31,7 @@ Department: The department will collect data as a softcopy without any paperwork
 
 **Use Case Diagram**
 
-![useCase](https://user-images.githubusercontent.com/6000700/215913965-ed74c224-5651-4069-afd3-4447b980e1a7.JPG)
+![useCase](https://user-images.githubusercontent.com/6000700/215914255-d3d30b2e-eff8-45a2-ab4f-b4c2250d613a.JPG)
 
 
 **ER Diagram**
