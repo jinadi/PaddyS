@@ -42,7 +42,7 @@ Department: The department will collect data as a softcopy without any paperwork
 **User Interfaces**
 ![login](https://user-images.githubusercontent.com/6000700/215938885-b1fc0dca-0191-4ce1-9502-39e901cb3795.JPG)
 ![MenuNew](https://user-images.githubusercontent.com/6000700/215938904-4a12aa19-42a6-4a83-8952-1a57005ed3d8.jpeg)
-![ini](https![dropDwon](https://user-images.githubusercontent.com/6000700/215938927-b2b8e3e2-2362-44ee-801d-9b561f645c76.JPG)
+![ini](https://user-images.githubusercontent.com/6000700/215939175-e324a682-5731-494b-814b-4212b658e946.JPG)
 ![dropDwon](https://user-images.githubusercontent.com/6000700/215939021-dea512dc-1910-42f7-bcc3-a64947e1046d.JPG)
 ![P0](https://user-images.githubusercontent.com/6000700/215938933-b8f99a21-42fb-41a1-b3cc-239f15c97e8f.jpeg)
 
